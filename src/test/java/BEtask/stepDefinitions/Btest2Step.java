@@ -24,7 +24,8 @@ public class Btest2Step {
         }
         catch (Throwable e) {
             System.out.println("Exception:" + e);
-        }    }
+        }
+    }
 
     @And("Confirm that the technical_doc URI is present")
     public void confirmThatTheTechnical_docURIIsPresent() {

@@ -31,6 +31,7 @@ public class ApiConnector {
                 .get(CONVERSION_URL + "?amount=1&id=" + cryptocurrency)
                 .thenReturn();
     }
+
     public Response getDocumentationForEtherium() {
         return SerenityRest
                 .given().spec(requestSpecification()).queryParam("id", "1027")
@@ -38,11 +39,12 @@ public class ApiConnector {
                 .get(DOCUMENTATION_URL)
                 .thenReturn();
     }
+
     public Response getDocumentation(int id) {
         return SerenityRest
                 .given().spec(requestSpecification())
                 .when()
-                .get(DOCUMENTATION_URL + "?id=" +id)
+                .get(DOCUMENTATION_URL + "?id=" + id)
                 .thenReturn();
     }
 }
